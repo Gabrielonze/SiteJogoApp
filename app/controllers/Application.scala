@@ -13,4 +13,16 @@ object Application extends Controller {
     Ok(views.html.login("Your new application is ready."))
   }
 
+  def catalogo = Action {
+    Ok(views.html.catalogo("Your new application is ready."))
+  }
+
+  def adicionar = Action {
+    Ok(views.html.adicionar("Your new application is ready."))
+  }
+
+  def meusjogos = Action {
+    Ok(views.html.meusjogos("Your new application is ready."))
+  }
+
 }

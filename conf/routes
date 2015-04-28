@@ -4,7 +4,9 @@
 
 # Home page
 GET     /                           controllers.Application.index
-GET     /something                  controllers.Application.login
+GET     /catalogo                   controllers.Application.catalogo
+GET     /adicionar                  controllers.Application.adicionar
+GET     /meusjogos                  controllers.Application.meusjogos
 GET     /login                      controllers.Application.login
 
 # Map static resources from the /public folder to the /assets URL path

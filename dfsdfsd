@@ -1,0 +1,59 @@
+[33mcommit f7b89a66949fcd298217fe8b89db5cf9fc85445c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 15:38:43 2015 -0300
+
+    Criado todas as paginas
+
+[33mcommit bf3648496d749448b630ee349507c1003f0e40c6[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:45:36 2015 -0300
+
+    Salvando no Pendrive
+
+[33mcommit e83fe79bd37c98e28b66df16a9bbfa0c5480a7dc[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:41:07 2015 -0300
+
+    Teste do @message
+
+[33mcommit 03b597b09f5452f60a7555029b8a6a36de694b2c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:34:53 2015 -0300
+
+    Site Completo como aplicativo, pronto para divisão
+
+[33mcommit 412fe4633887f81ad495c368576c7e10959f670c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:26:44 2015 -0300
+
+    Menu com CSS funcionando
+
+[33mcommit 5839bb8be0b5d34349d57dab9ae5932fe53a838f[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:17:29 2015 -0300
+
+    Organizando CSS na public (mesmo lugar da main)
+
+[33mcommit bcd2414a77477849446ca45b6d133933d7a2db99[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:04:04 2015 -0300
+
+    Teste de uso do HTML no views~
+
+[33mcommit 6826f7ab83eba9136858f9dc34867a2658214e29[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 11:43:59 2015 -0300
+
+    Teste Git transferencia de pasta
+
+[33mcommit aa19e914aaca625862823a7c0501f56877fcb376[m
+Author: Gabriel S. Alves <gabrielonze@hotmail.com>
+Date:   Mon Apr 27 21:45:37 2015 -0300
+
+    Teste colocar arquivo Public
+
+[33mcommit a1a5cb918fa50ec3b0c9ebec6db6c58b5ce2de59[m
+Author: Gabriel S. Alves <gabrielonze@hotmail.com>
+Date:   Mon Apr 27 21:27:36 2015 -0300
+
+    Site Base
