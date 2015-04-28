@@ -6,6 +6,10 @@
 	font-family: Open Sans;
 }
 
+html body{
+	background: #585E6D;
+}
+
 a:hover{
 	color: white;
 	text-decoration: none;
@@ -45,7 +49,8 @@ a:hover{
 
 .cont{
 	background: #585E6D;
-	padding-top: 2.1%
+	padding-top: 2.1%;
+	position:relative;
 }
 
 .name_pg{
@@ -77,6 +82,9 @@ a:hover{
 .rodape{
 	background: #2649A9;
 	text-align: center;
+	position:absolute;
+	bottom:0;
+	width: 100%;
 }
 
 .shb{
