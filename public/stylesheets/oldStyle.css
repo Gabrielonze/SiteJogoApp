@@ -6,6 +6,11 @@
 	font-family: Open Sans;
 }
 
+a{
+	margin: 0px;
+	padding:0px;
+}
+
 .topo{
 	width: 100%; 	
 	background: #EEE;
