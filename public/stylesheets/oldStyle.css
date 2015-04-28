@@ -6,9 +6,10 @@
 	font-family: Open Sans;
 }
 
-a{
-	margin: 0px;
-	padding:0px;
+a:hover{
+	color: white;
+	text-decoration: none;
+	background: RGBA(38, 73, 169, 0.9);
 }
 
 .topo{
