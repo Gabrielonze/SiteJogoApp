@@ -1,0 +1,64 @@
+@(message: String)
+
+@main("Log in / Sign in") {
+
+<div class="cont row-fluid">
+	<div class="row-fluid name_pg shb lebr"><h1> Catalogo </h1></div>
+	
+	<div class="row-fluid name_pg shb lebr"><h1> Registre-se // Login </h1></div>
+	
+	<div class="row-fluid app_part shb">
+		<div class="span6">
+			<div class="row-fluid name_pg shb lebr"><h1> Registro</h1></div>
+			<form method="POST" action="#">
+				<div class="row-fluid">
+					<label class="span12">
+						Nome:<br/>
+						<input type="text" name="nome" required>
+					</label>
+				</div>
+				<div class="row-fluid">
+
+					<label class="span12">
+						Email:<br/>
+						<input type="email" name="email" required>
+					</label>
+				</div>
+				<div class="row-fluid">
+					<label class="span12">
+						Senha:<br/>
+						<input type="password" name="pw">
+					</label>
+				</div>
+				<div class="row-fluid">
+					<label class="span12">
+						<input type="submit" value="Cadastrar">
+					</label>
+				</div>
+			</form>
+		</div>
+		<div class="span6">
+			<div class="row-fluid name_pg shb lebr"><h1>Login</h1></div>
+			<form method="POST" action="#">
+				<div class="row-fluid">
+					<label class="span12">
+						Email:<br/>
+						<input type="email" name="email" required>
+					</label>
+				</div>
+				<div class="row-fluid">
+					<label class="span12">
+						Senha:<br/>
+						<input type="password" name="pw">
+					</label>
+				</div>
+				<div class="row-fluid">
+					<label class="span12">
+						<input type="submit" value="Entrar">
+					</label>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+}
