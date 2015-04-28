@@ -1,0 +1,222 @@
+New log file opened at Mon Apr 27 21:26:27 BRT 2015 by 3440@ProfLab2-PC
+jvm 3440@ProfLab2-PC
+jvm vmName=Java HotSpot(TM) Client VM vmVendor=Oracle Corporation vmVersion=25.45-b02
+jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
+jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
+Starting event engine
+Starting sbt command engine
+Waiting for sbt command engine
+Command engine arguments=List()
+Command engine baseDirectory=C:\Users\ProfLab2\Downloads\a\a\SiteJogo
+Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
+> --initialize
+> initialize
+> onFailure load-failed
+> boot
+> reload
+[Loading] Scanning directory C:\Users\ProfLab2\Downloads\a\a\SiteJogo\project
+[Loading] Found non-root projects 
+[Loading] Done in C:\Users\ProfLab2\Downloads\a\a\SiteJogo\project, returning: ()
+deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
+  :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
+sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin) not found List(sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin) not found List(sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
+  :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
+  :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
+[Loading] Done in C:\Users\ProfLab2\Downloads\a\a\SiteJogo\project, returning: (sitejogo-build)
+Loading project definition from C:\Users\ProfLab2\Downloads\a\a\SiteJogo\project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@ff8323, check cycles: false
+[info] Updating {file:/C:/Users/ProfLab2/Downloads/a/a/SiteJogo/project/}sitejogo-build...
+Updating {file:/C:/Users/ProfLab2/Downloads/a/a/SiteJogo/project/}sitejogo-build...
+Other repositories:
+Default repositories:
+Using inline dependencies specified in Scala.
+:: resolving dependencies :: default#sitejogo-build;0.1-SNAPSHOT
+	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
+	validate = true
+	refresh = false
+resolving dependencies for configuration 'compile'
+== resolving dependencies for default#sitejogo-build;0.1-SNAPSHOT [compile]
+== resolving dependencies default#sitejogo-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.3.8 [compile->default(compile)]
+[info] Resolving com.typesafe.play#sbt-plugin;2.3.8 ...
+Resolving com.typesafe.play#sbt-plugin;2.3.8 ...
+sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-plugin;2.3.8 {compile=[default(compile)]}
+[info] Resolving com.typesafe.play#sbt-plugin;2.3.8 ...
+Resolving com.typesafe.play#sbt-plugin;2.3.8 ...
+sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#sbt-plugin;2.3.8 {compile=[default(compile)]}
+		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.3.8/ivys/ivy.xml
+	typesafe-ivy-releases: found md file for com.typesafe.play#sbt-plugin;2.3.8
+		=> https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.3.8/ivys/ivy.xml (2.3.8)
+downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.3.8/ivys/ivy.xml ...
+	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.3.8/ivys/ivy.xml
+	typesafe-ivy-releases: downloading https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.3.8/ivys/ivy.xml.sha1
+sha1 OK for https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/sbt-plugin/scala_2.10/sbt_0.13/2.3.8/ivys/ivy.xml
+	[SUCCESSFUL ] com.typesafe.play#sbt-plugin;2.3.8!ivy.xml(ivy.original) (791ms)
+	found com.typesafe.play#sbt-plugin;2.3.8 in typesafe-ivy-releases
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe.play#routes-compiler_2.10;2.3.8 [compile->default(compile)]
+[info] Resolving com.typesafe.play#routes-compiler_2.10;2.3.8 ...
+Resolving com.typesafe.play#routes-compiler_2.10;2.3.8 ...
+sbt-chain: Checking cache for: dependency: com.typesafe.play#routes-compiler_2.10;2.3.8 {compile=[default(compile)]}
+[info] Resolving com.typesafe.play#routes-compiler_2.10;2.3.8 ...
+Resolving com.typesafe.play#routes-compiler_2.10;2.3.8 ...
+sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#routes-compiler_2.10;2.3.8 {compile=[default(compile)]}
+		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/routes-compiler_2.10/2.3.8/ivys/ivy.xml
+CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/routes-compiler_2.10/2.3.8/ivys/ivy.xml
+	typesafe-ivy-releases: no ivy file found for com.typesafe.play#routes-compiler_2.10;2.3.8
+		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/routes-compiler_2.10/2.3.8/ivys/ivy.xml
+CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/routes-compiler_2.10/2.3.8/ivys/ivy.xml
+	sbt-plugin-releases: no ivy file found for com.typesafe.play#routes-compiler_2.10;2.3.8
+		tried C:\Users\ProfLab2\.ivy2\local\com.typesafe.play\routes-compiler_2.10\2.3.8\ivys\ivy.xml
+	local: no ivy file found for com.typesafe.play#routes-compiler_2.10;2.3.8
+		tried C:\doesnotexist\repository\com.typesafe.play\routes-compiler_2.10\2.3.8\ivys\ivy.xml
+	activator-launcher-local: no ivy file found for com.typesafe.play#routes-compiler_2.10;2.3.8
+		tried C:\Users\ProfLab2\Downloads\a\a\repository\com.typesafe.play\routes-compiler_2.10\2.3.8\ivys\ivy.xml
+	activator-local: found md file for com.typesafe.play#routes-compiler_2.10;2.3.8
+		=> C:\Users\ProfLab2\Downloads\a\a\repository\com.typesafe.play\routes-compiler_2.10\2.3.8\ivys\ivy.xml (2.3.8)
+	[NOT REQUIRED] com.typesafe.play#routes-compiler_2.10;2.3.8!ivy.xml(ivy.original)
+	found com.typesafe.play#routes-compiler_2.10;2.3.8 in activator-local
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe.play#routes-compiler_2.10;2.3.8 [compile->runtime]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe.play#routes-compiler_2.10;2.3.8 [compile->compile]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+[info] Resolving org.scala-lang#scala-library;2.10.4 ...
+Resolving org.scala-lang#scala-library;2.10.4 ...
+sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.10.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4
+	found org.scala-lang#scala-library;2.10.4 in sbt-chain
+	[2.10.4] org.scala-lang#scala-library;2.10.4
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->runtime(*)]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->commons-io#commons-io;2.0.1 [compile->master(compile)]
+[info] Resolving commons-io#commons-io;2.0.1 ...
+Resolving commons-io#commons-io;2.0.1 ...
+sbt-chain: Checking cache for: dependency: commons-io#commons-io;2.0.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+sbt-chain: module revision found in cache: commons-io#commons-io;2.0.1
+	found commons-io#commons-io;2.0.1 in sbt-chain
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->commons-io#commons-io;2.0.1 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->commons-io#commons-io;2.0.1 [compile->runtime(*)]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->commons-io#commons-io;2.0.1 [compile->compile]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->compile]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->commons-io#commons-io;2.0.1 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#routes-compiler_2.10;2.3.8->commons-io#commons-io;2.0.1 [runtime->compile]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe.play#routes-compiler_2.10;2.3.8 [compile->master]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->default(compile)]
+[info] Resolving com.typesafe.play#sbt-run-support_2.10;2.3.8 ...
+Resolving com.typesafe.play#sbt-run-support_2.10;2.3.8 ...
+sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-run-support_2.10;2.3.8 {compile=[default(compile)]}
+[info] Resolving com.typesafe.play#sbt-run-support_2.10;2.3.8 ...
+Resolving com.typesafe.play#sbt-run-support_2.10;2.3.8 ...
+sbt-chain-delegate: Checking cache for: dependency: com.typesafe.play#sbt-run-support_2.10;2.3.8 {compile=[default(compile)]}
+		tried https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/sbt-run-support_2.10/2.3.8/ivys/ivy.xml
+CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.play/sbt-run-support_2.10/2.3.8/ivys/ivy.xml
+	typesafe-ivy-releases: no ivy file found for com.typesafe.play#sbt-run-support_2.10;2.3.8
+		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-run-support_2.10/2.3.8/ivys/ivy.xml
+CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.play/sbt-run-support_2.10/2.3.8/ivys/ivy.xml
+	sbt-plugin-releases: no ivy file found for com.typesafe.play#sbt-run-support_2.10;2.3.8
+		tried C:\Users\ProfLab2\.ivy2\local\com.typesafe.play\sbt-run-support_2.10\2.3.8\ivys\ivy.xml
+	local: no ivy file found for com.typesafe.play#sbt-run-support_2.10;2.3.8
+		tried C:\doesnotexist\repository\com.typesafe.play\sbt-run-support_2.10\2.3.8\ivys\ivy.xml
+	activator-launcher-local: no ivy file found for com.typesafe.play#sbt-run-support_2.10;2.3.8
+		tried C:\Users\ProfLab2\Downloads\a\a\repository\com.typesafe.play\sbt-run-support_2.10\2.3.8\ivys\ivy.xml
+	activator-local: found md file for com.typesafe.play#sbt-run-support_2.10;2.3.8
+		=> C:\Users\ProfLab2\Downloads\a\a\repository\com.typesafe.play\sbt-run-support_2.10\2.3.8\ivys\ivy.xml (2.3.8)
+	[NOT REQUIRED] com.typesafe.play#sbt-run-support_2.10;2.3.8!ivy.xml(ivy.original)
+	found com.typesafe.play#sbt-run-support_2.10;2.3.8 in activator-local
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->runtime]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->compile]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->master(compile)]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->com.typesafe.play#build-link;2.3.8 [compile->master(compile)]
+[info] Resolving com.typesafe.play#build-link;2.3.8 ...
+Resolving com.typesafe.play#build-link;2.3.8 ...
+sbt-chain: Checking cache for: dependency: com.typesafe.play#build-link;2.3.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+sbt-chain: module revision found in cache: com.typesafe.play#build-link;2.3.8
+	found com.typesafe.play#build-link;2.3.8 in sbt-chain
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->com.typesafe.play#build-link;2.3.8 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->master(compile)]
+[info] Resolving com.typesafe.play#play-exceptions;2.3.8 ...
+Resolving com.typesafe.play#play-exceptions;2.3.8 ...
+sbt-chain: Checking cache for: dependency: com.typesafe.play#play-exceptions;2.3.8 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+sbt-chain: module revision found in cache: com.typesafe.play#play-exceptions;2.3.8
+	found com.typesafe.play#play-exceptions;2.3.8 in sbt-chain
+== resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [compile->compile(*)]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->master(compile)]
+[info] Resolving org.javassist#javassist;3.18.2-GA ...
+Resolving org.javassist#javassist;3.18.2-GA ...
+sbt-chain: Checking cache for: dependency: org.javassist#javassist;3.18.2-GA {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+sbt-chain: module revision found in cache: org.javassist#javassist;3.18.2-GA
+	found org.javassist#javassist;3.18.2-GA in sbt-chain
+== resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->default(compile)]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->runtime]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->compile]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [compile->master]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->com.typesafe.play#build-link;2.3.8 [compile->runtime(*)]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->com.typesafe.play#build-link;2.3.8 [compile->compile]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->com.typesafe.play#play-exceptions;2.3.8 [runtime->compile]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#build-link;2.3.8->org.javassist#javassist;3.18.2-GA [runtime->compile]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->org.scala-lang#scala-library;2.10.4 [runtime->compile]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->com.typesafe.play#build-link;2.3.8 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#sbt-run-support_2.10;2.3.8->com.typesafe.play#build-link;2.3.8 [runtime->compile]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe.play#sbt-run-support_2.10;2.3.8 [compile->master]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe#config;1.2.1 [compile->default(compile)]
+[info] Resolving com.typesafe#config;1.2.1 ...
+Resolving com.typesafe#config;1.2.1 ...
+sbt-chain: Checking cache for: dependency: com.typesafe#config;1.2.1 {compile=[default(compile)]}
+sbt-chain: module revision found in cache: com.typesafe#config;1.2.1
+	found com.typesafe#config;1.2.1 in sbt-chain
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe#config;1.2.1 [compile->runtime]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe#config;1.2.1 [compile->compile]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.typesafe#config;1.2.1 [compile->master]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->org.mozilla#rhino;1.7R4 [compile->default(compile)]
+[info] Resolving org.mozilla#rhino;1.7R4 ...
+Resolving org.mozilla#rhino;1.7R4 ...
+sbt-chain: Checking cache for: dependency: org.mozilla#rhino;1.7R4 {compile=[default(compile)]}
+[info] Resolving org.mozilla#rhino;1.7R4 ...
+Resolving org.mozilla#rhino;1.7R4 ...
+sbt-chain-delegate: Checking cache for: dependency: org.mozilla#rhino;1.7R4 {compile=[default(compile)]}
+		tried https://repo.typesafe.com/typesafe/ivy-releases/org.mozilla/rhino/1.7R4/ivys/ivy.xml
+CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/org.mozilla/rhino/1.7R4/ivys/ivy.xml
+	typesafe-ivy-releases: no ivy file found for org.mozilla#rhino;1.7R4
+		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.mozilla/rhino/1.7R4/ivys/ivy.xml
+CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/org.mozilla/rhino/1.7R4/ivys/ivy.xml
+	sbt-plugin-releases: no ivy file found for org.mozilla#rhino;1.7R4
+		tried C:\Users\ProfLab2\.ivy2\local\org.mozilla\rhino\1.7R4\ivys\ivy.xml
+	local: no ivy file found for org.mozilla#rhino;1.7R4
+		tried C:\doesnotexist\repository\org.mozilla\rhino\1.7R4\ivys\ivy.xml
+	activator-launcher-local: no ivy file found for org.mozilla#rhino;1.7R4
+		tried C:\Users\ProfLab2\Downloads\a\a\repository\org.mozilla\rhino\1.7R4\ivys\ivy.xml
+	activator-local: found md file for org.mozilla#rhino;1.7R4
+		=> C:\Users\ProfLab2\Downloads\a\a\repository\org.mozilla\rhino\1.7R4\ivys\ivy.xml (1.7R4)
+	[NOT REQUIRED] org.mozilla#rhino;1.7R4!ivy.xml(ivy.original)
+	found org.mozilla#rhino;1.7R4 in activator-local
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->org.mozilla#rhino;1.7R4 [compile->runtime]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->org.mozilla#rhino;1.7R4 [compile->compile]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->org.mozilla#rhino;1.7R4 [compile->master]
+== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.javascript#closure-compiler;v20130603 [compile->default(compile)]
+[info] Resolving com.google.javascript#closure-compiler;v20130603 ...
+Resolving com.google.javascript#closure-compiler;v20130603 ...
+sbt-chain: Checking cache for: dependency: com.google.javascript#closure-compiler;v20130603 {compile=[default(compile)]}
+[info] Resolving com.google.javascript#closure-compiler;v20130603 ...
+Resolving com.google.javascript#closure-compiler;v20130603 ...
+sbt-chain-delegate: Checking cache for: dependency: com.google.javascript#closure-compiler;v20130603 {compile=[default(compile)]}
+		tried https://repo.typesafe.com/typesafe/ivy-releases/com.google.javascript/closure-compiler/v20130603/ivys/ivy.xml
+CLIENT ERROR: Not Found url=https://repo.typesafe.com/typesafe/ivy-releases/com.google.javascript/closure-compiler/v20130603/ivys/ivy.xml
+	typesafe-ivy-releases: no ivy file found for com.google.javascript#closure-compiler;v20130603
+		tried https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.javascript/closure-compiler/v20130603/ivys/ivy.xml
+CLIENT ERROR: Not Found url=https://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.google.javascript/closure-compiler/v20130603/ivys/ivy.xml
+	sbt-plugin-releases: no ivy file found for com.google.javascript#closure-compiler;v20130603
+		tried C:\Users\ProfLab2\.ivy2\local\com.google.javascript\closure-compiler\v20130603\ivys\ivy.xml
+	local: no ivy file found for com.google.javascript#closure-compiler;v20130603
+		tried C:\doesnotexist\repository\com.google.javascript\closure-compiler\v20130603\ivys\ivy.xml
+	activator-launcher-local: no ivy file found for com.google.javascript#closure-compiler;v20130603
+		tried C:\Users\ProfLab2\Downloads\a\a\repository\com.google.javascript\closure-compiler\v20130603\ivys\ivy.xml
+	activator-local: found md file for com.google.javascript#closure-compiler;v20130603
+		=> C:\Users\ProfLab2\Downloads\a\a\repository\com.google.javascript\closure-compiler\v20130603\ivys\ivy.xml (v20130603)
+	[NOT REQUIRED] com.google.javascript#closure-compiler;v20130603!ivy.xml(ivy.original)
