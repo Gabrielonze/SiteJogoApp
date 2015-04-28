@@ -1,0 +1,97 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+*{
+	margin: 0px;
+	padding:0px;
+	font-family: Open Sans;
+}
+
+.topo{
+	width: 100%; 	
+	background: #EEE;
+}
+
+.top_ind{
+	background: #2649A9;
+	text-align: center;
+	margin: 2% 0px;
+	border-radius: 10px;
+	padding: .5% 0px 0px 0px;
+	color: white;
+}
+
+.oran{
+	background: #2649A9;
+	color:white;
+}
+
+.flo_l{
+	float: left;
+}
+
+.flo_r{
+	float: right;
+}
+
+.lebr{
+	color: white;
+}
+
+.cont{
+	background: #585E6D;
+	padding-top: 2.1%
+}
+
+.name_pg{
+	background: #2649A9;
+	margin: 2% auto 0 auto;
+	text-align: center;
+	border-radius: 5px 5px 0 0;
+}
+
+.app_part{
+	background: #EEE;
+	margin: 0.5% auto;
+}
+
+.pedidos_item{
+	border-radius: 5px;
+	margin: 2% 0px;
+	background: white;
+}
+
+
+.pedidos_item_things{
+	border-radius: 5px;
+	font-size: 1.7em;
+	text-align: center;
+	padding: 3% 0px;
+}
+
+.rodape{
+	background: #2649A9;
+	text-align: center;
+}
+
+.shb{
+	box-shadow: 5px 5px 10px RGBA(0,0,0,0.5);
+	-webkit-box-shadow: 5px 5px 10px RGBA(0,0,0,0.5);
+	-moz-box-shadow: 5px 5px 10px RGBA(0,0,0,0.5);
+}
+
+.app_part label{
+	text-align: center;
+}
+
+.app_part textarea{
+	 width: 80%;
+	 resize: none;
+}
+
+.envJo{
+	margin: 12% 0%;
+}
+
+.app_part form{
+	 margin: 2% 0px 0px 0px; 
+}

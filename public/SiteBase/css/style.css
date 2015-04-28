@@ -1,0 +1,36 @@
+@font-face {font-family: 'a';src: local('a'), url('a.ttf')format('truetype')}
+
+
+.bg-black{background:rgba(10,10,10,0.70); color:white}
+.bg-yellow{background:rgba(255,204,0,0.90);font-family:a;text-shadow:black 2px 2px 2px}
+.bg-white{background:white}
+.bg-yellow-lite{background:RGBA(244,211,54,0.2);}
+.bg-white1{background:rgba(200,200,200,0.5)}
+
+.home-hover:hover{background: rgba(0,0,0,0.9);color:rgba(255,204,0,0.90)}
+
+.m-p{padding:1.5% 0}
+
+.padding-tb5{padding:5% 0}
+
+.padding-tb10{padding:8% 0}
+
+.font-size1{font-size:34px;height:70px}
+.font-size2{font-size:22px}
+.font-zero{font-size:0em}
+
+.futura{font-family: 'Futura Bk BT'}
+
+.sa{background-image:url(../img/50.png);background-repeat:no-repeat}
+
+.altura_banner{height:250px}
+
+.mb{margin-bottom:20px}
+
+.radius{border-radius: 0 15%}
+
+.foto-b{background-image: url(../img/video.jpg);}
+.foto-a{background-image: url(../img/fotografias.jpg);}
+.foto-c{background-image:url(../img/album.jpg)}
+
+
