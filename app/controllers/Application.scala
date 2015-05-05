@@ -24,11 +24,7 @@ object Application extends Controller {
   }
 
   def meusjogos = Action {
-    Ok(views.html.meusjogos("Your new application is ready."))
-  }
-
-  def tes = Action {
-    val contJogos = List(
+   val contJogos = List(
       Game(1,"Batman","Muito Bom",10,"Ação"),
       Game(2,"NFS Most Wanted","Excelênte",10,"Corrida"),
       Game(2,"Resident Evil 5","Loucooo",10,"Suspense"),
@@ -42,7 +38,12 @@ object Application extends Controller {
       Game(11,"NFS Most Wanted","Excelênte",10,"Corrida"),
       Game(12,"Resident Evil 5","Loucooo",10,"Suspense")
       )
-    Ok(views.html.tes(contJogos))
+    Ok(views.html.meusjogos(contJogos))
+  }
+
+  def tes = Action {
+    
+    Ok(views.html.tes("Your new application is ready."))
   }
 
 }
