@@ -3,7 +3,7 @@ package controllers
 import play.api._
 import play.api.mvc._
 
-case class Game(nome: String, descricao: String, nota: Float, genero: String)
+case class Game(id: Int, nome: String, descricao: String, nota: Float, genero: String)
 
 object Application extends Controller {
 
@@ -29,12 +29,18 @@ object Application extends Controller {
 
   def tes = Action {
     val contJogos = List(
-      Game("Batman","Muito Bom",10,"Ação"),
-      Game("NFS Most Wanted","Excelênte",10,"Corrida"),
-      Game("Resident Evil 5","Loucooo",10,"Suspense"),
-      Game("Batman","Muito Bom",10,"Ação"),
-      Game("NFS Most Wanted","Excelênte",10,"Corrida"),
-      Game("Resident Evil 5","Loucooo",10,"Suspense")
+      Game(0,"Batman","Muito Bom",10,"Ação"),
+      Game(1,"NFS Most Wanted","Excelênte",10,"Corrida"),
+      Game(2,"Resident Evil 5","Loucooo",10,"Suspense"),
+      Game(3,"Batman","Muito Bom",10,"Ação"),
+      Game(4,"NFS Most Wanted","Excelênte",10,"Corrida"),
+      Game(5,"Resident Evil 5","Loucooo",10,"Suspense"),
+      Game(6,"Batman","Muito Bom",10,"Ação"),
+      Game(7,"NFS Most Wanted","Excelênte",10,"Corrida"),
+      Game(8,"Resident Evil 5","Loucooo",10,"Suspense"),
+      Game(9,"Batman","Muito Bom",10,"Ação"),
+      Game(10,"NFS Most Wanted","Excelênte",10,"Corrida"),
+      Game(11,"Resident Evil 5","Loucooo",10,"Suspense")
       )
     Ok(views.html.tes(contJogos))
   }
