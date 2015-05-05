@@ -8,6 +8,7 @@ GET     /login                      controllers.Application.login
 GET     /catalogo                   controllers.Application.catalogo
 GET     /meusjogos                  controllers.Application.meusjogos
 GET     /adicionar                  controllers.Application.adicionar
+GET     /tes                        controllers.Application.tes
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
