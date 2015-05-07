@@ -9,6 +9,7 @@ scalaVersion := "2.11.1"
 libraryDependencies ++= Seq(
   jdbc,
   anorm,
-  cache,
+  cache, 
+  "postgresql" % "postgresql" % "9.1-901-1.jdbc4",
   ws
 )
