@@ -6,7 +6,7 @@
 GET     /                           controllers.Application.index
 GET     /login                      controllers.Application.login
 GET     /catalogo                   controllers.Application.catalogo
-#GET     /meusjogos                  controllers.Application.meusjogos
+GET     /meusjogos                  controllers.Application.meusjogos
 GET     /adicionar                  controllers.Application.adicionar
 GET     /tes                        controllers.Application.tes
 
