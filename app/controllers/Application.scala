@@ -17,7 +17,7 @@ object Application extends Controller {
   )
 
   def index = Action {
-    Ok(views.html.index(barForm))
+    Ok(views.html.index("Your new application is ready."))
   }
 
   def addBar() = Action { implicit request =>
@@ -38,7 +38,7 @@ object Application extends Controller {
   }
 
   def catalogo = Action {
-    Ok(views.html.catalogo("Your new application is ready."))
+    Ok(views.html.catalogo(barForm))
   }
 
   def adicionar = Action {

@@ -10,7 +10,7 @@ GET     /catalogo                   controllers.Application.catalogo
 GET     /adicionar                  controllers.Application.adicionar
 GET     /tes                        controllers.Application.tes
 
-GET     /bars                       controllers.Application.getBars
+GET     /barsl                       controllers.Application.getBars
 POST    /bars                       controllers.Application.addBar
 
 # Map static resources from the /public folder to the /assets URL path

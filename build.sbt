@@ -11,5 +11,6 @@ libraryDependencies ++= Seq(
   anorm,
   cache, 
   "postgresql" % "postgresql" % "9.1-901-1.jdbc4",
+  "org.webjars" % "jquery" % "1.11.2",
   ws
 )

@@ -1,8 +1,11 @@
-@(message: String)
+@(form: play.api.data.Form[String])
 
 @main("Catalogo de Jogos") {
 <script src="@routes.Assets.at("javascripts/code.js")" type="text/javascript"></script>
 <div class="cont row-fluid">
+
+	 <ul id="bars"></ul>
+
 	<div class="row-fluid name_pg shb lebr"><h1> Catalogo </h1></div>
 	
 	<div class="row-fluid app_part shb">
