@@ -32,7 +32,7 @@ object Game {
         'nome -> game.nome,
         'descricao -> game.descricao,
         'nota -> game.nota,
-        'genero -> game.genero,
+        'genero -> game.genero
       ).executeUpdate()
     }
   }
