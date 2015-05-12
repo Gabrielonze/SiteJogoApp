@@ -1,4 +1,4 @@
 $ ->
-  $.get "/barsl", (data) ->
-    $.each data, (catalogo, item) ->
-      $("#bars").append $("<li>").text item.name
+  $.get "/gamelist", (data) ->
+    $.each data, (index, item) ->
+      $("#games").append $("<li>").text item.name

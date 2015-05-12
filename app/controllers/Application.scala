@@ -4,41 +4,48 @@ import play.api.data.Form
 import play.api.data.Forms.{single, nonEmptyText}
 import play.api.mvc.{Action, Controller}
 
-import models.Bar
+import models.Game
 import play.api.libs.json.Json
 
 
 object Application extends Controller {
 
-  implicit val barWrites = Json.writes[Bar]
+  implicit val gameWrites = Json.writes[Game]
 
-  val barForm = Form(
-    single("name" -> nonEmptyText)
+  val gameForm = Form(
+    single("nome" -> nonEmptyText)
+    single("descricao" -> nonEmptyText)
+    single("genero" -> nonEmptyText)
+    single("nota" -> nonEmptyText)
+    single("finalizado" -> nonEmptyText)
   )
 
-  def index = Action {
-    Ok(views.html.index("Your new application is ready."))
-  }
-
   def addBar() = Action { implicit request =>
-    barForm.bindFromRequest.value map { name =>
-      Bar.create(Bar(0, name))
+    gameForm.bindFromRequest.value map { name =>
+      Bar.create(Game(0, name))
       Redirect(routes.Application.index())
     } getOrElse BadRequest
   }
 
   def getBars() = Action {
-    val bars = Bar.findAll()
+    val bars = Game.findAll()
     Ok(Json.toJson(bars))
   }
 
+  def index = Action {
+    Ok(views.html.index("Your new application is ready."))
+  }
 
   def login = Action {
     Ok(views.html.login("Your new application is ready."))
   }
 
   def catalogo = Action {
-    Ok(views.html.catalogo(barForm))
+    Ok(views.html.catalogo("Your new application is ready."))
+  }
+
+  def meusjogos = Action {
+    Ok(views.html.meusjogos(gameForm))
   }
 
   def adicionar = Action {

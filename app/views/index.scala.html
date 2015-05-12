@@ -7,7 +7,12 @@
     <ul id="bars"></ul>
 
     <form method="POST" action="/bars">
-        <input type="text" name="name">
+        <input type="text" placeholder="Nome:" name="nome">
+        <input type="text" placeholder="Finalizado em:" name="finalizado" required>
+		<input type="text" placeholder="Nota:" name="nota" required>
+		<input type="text" placeholder="Genero" name="genero" required>
+		<textarea name="comentario"></textarea>
+
         <input type="submit"/>
     </form>
 
