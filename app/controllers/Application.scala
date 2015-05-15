@@ -1,5 +1,6 @@
 package controllers
 
+import play.api.data.Forms._
 import play.api.data.Form
 import play.api.data.Forms.{single, nonEmptyText}
 import play.api.mvc.{Action, Controller}
@@ -13,23 +14,26 @@ object Application extends Controller {
   implicit val gameWrites = Json.writes[Game]
 
   val gameForm = Form(
-    single("nome" -> nonEmptyText)
-    single("descricao" -> nonEmptyText)
-    single("genero" -> nonEmptyText)
-    single("nota" -> nonEmptyText)
-    single("finalizado" -> nonEmptyText)
+    mapping(
+      "0" -> number,
+      "nome" -> text,
+      "finalizado" -> text,
+      "descricao" -> text,
+      "nota" -> number,
+      "genero" -> text
+    )(Game.apply)(Game.unapply)
   )
 
   def addBar() = Action { implicit request =>
-    gameForm.bindFromRequest.value map { name =>
-      Bar.create(Game(0, name))
+    gameForm.bindFromRequest.value map {nome;finalizado;descricao;nota;genero =>
+      Game.create(Game(0, nome,finalizado,descricao,nota,genero))
       Redirect(routes.Application.index())
     } getOrElse BadRequest
   }
 
   def getBars() = Action {
     val bars = Game.findAll()
-    Ok(Json.toJson(bars))
+    Ok(Json.toJson(games))
   }
 
   def index = Action {

@@ -10,6 +10,7 @@ create table bar (
 create table jogos(
 	ID int identity primary key,
 	nome varchar(100),
+	finalizado varchar(20),
 	descricao varchar(MAX),
 	nota smallint,
 	genero varchar(50)
