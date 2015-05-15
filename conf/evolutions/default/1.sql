@@ -2,7 +2,7 @@
 
 # --- !Ups
 create table game(
-	ID int primary key,
+	ID int,
 	nome varchar(100),
 	finalizado varchar(20),
 	descricao varchar(300),
@@ -10,8 +10,12 @@ create table game(
 	genero varchar(50)
 );
 
+
+insert into game(id, nome, finalizado, descricao, nota, genero) values (10,'Pelo DB','DB','DB','DB','DB')
+
 # --- !Downs
 
 drop table if exists bar;
 
 drop table if exists game;
+

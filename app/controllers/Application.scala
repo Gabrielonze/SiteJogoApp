@@ -27,10 +27,10 @@ object Application extends Controller {
   def addGame() = Action { implicit request =>
     gameForm.bindFromRequest.fold(
     formWithErrors => {
-      BadRequest(views.html.index("ERRO"))
+      BadRequest(views.html.catalogo("ERRO"))
     },
     contact => {
-      val gameId = Game.create(Game(0, "nome","finalizado","descricao","nota","genero"))
+      val gameId = Game.create(Game(15, "nome","finalizado","descricao","nota","genero"))
       Redirect(routes.Application.index())
     }
   )
@@ -42,7 +42,7 @@ object Application extends Controller {
   }
 
   def index = Action {
-    Ok(views.html.index("Your new application is ready."))
+    Ok(views.html.index(gameForm))
   }
 
   def login = Action {

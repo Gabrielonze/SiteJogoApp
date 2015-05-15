@@ -1,0 +1,215 @@
+[33mcommit a753f31bc47fce4838e11aeb5e1bbe67bbebbdef[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Fri May 15 11:42:37 2015 -0300
+
+    Corrigido mapeamento do Form combinando com a Class Game
+
+[33mcommit 6a54f28ff0771d6b62b3e795dfdf1aa55378861c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 12 18:58:58 2015 -0300
+
+    Index.coffee updated, applications update started
+
+[33mcommit 1a5b7395b4271b268e1c0ba980a6a08d9cbe5802[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 12 18:01:22 2015 -0300
+
+    routes update
+
+[33mcommit 7db2de4eb1421e4a5fa225ec1a90ac67674ea878[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 12 17:57:53 2015 -0300
+
+    1.sql update
+
+[33mcommit aab362b3fccdbce8988e5129a9fd03e84a821603[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 12 17:54:14 2015 -0300
+
+    Bar to -> Game.scala
+
+[33mcommit 88891f668c3ddbe223d18295b2b40e4d4b144986[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 12 17:15:58 2015 -0300
+
+    Funcionando como bar, convertendo p/ game
+
+[33mcommit 2a82476492bb0935ccacaa2bf06ef73d2d66d698[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Sun May 10 23:42:12 2015 -0300
+
+    Funcionando como 'Bar'
+
+[33mcommit 3c390ba00051ad0e785992cbcf2f5fd1805bc7c2[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Sun May 10 18:01:37 2015 -0300
+
+    game.scala configurado
+
+[33mcommit 43239eff23889d8818cbc132cbd394bf54e9d6ed[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Fri May 8 11:33:35 2015 -0300
+
+    Banco de dados rodando local
+
+[33mcommit 01b825d095195625d69a92289092aff9a3c3a84b[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Fri May 8 11:30:46 2015 -0300
+
+    Banco de dados rodando local
+
+[33mcommit 8c97bb294e8c253556fbf9845c22412cfaab931c[m
+Author: Gabriel S. Alves <gabrielonze@hotmail.com>
+Date:   Thu May 7 17:48:52 2015 -0300
+
+    Teste de funcionabilidade
+
+[33mcommit f857bf9cbc3555ae07970b0d744a435ec03388b9[m
+Author: Gabriel S. Alves <gabrielonze@hotmail.com>
+Date:   Thu May 7 17:22:20 2015 -0300
+
+    Teste de Conn
+
+[33mcommit d94a4d7951ba4a6cf6492e7166be1c803ce4f77e[m
+Author: Gabriel S. Alves <gabrielonze@hotmail.com>
+Date:   Thu May 7 17:01:54 2015 -0300
+
+    Corrigindo application.config
+
+[33mcommit 230f8eb80b141c03bedd6301b0c341055702e00d[m
+Author: Gabriel S. Alves <gabrielonze@hotmail.com>
+Date:   Thu May 7 16:50:56 2015 -0300
+
+    Configurando database (Email)
+
+[33mcommit 1b22565acb598053b07d696813171ed368b8cb4b[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 5 17:45:48 2015 -0300
+
+    Tirando da pagina teste para 'Meus Jogos'
+
+[33mcommit acf2e3a55345a1d1c242e60e54971ad02820ac16[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 5 17:38:44 2015 -0300
+
+    Corrigindo exibição de colunas
+
+[33mcommit 28ed0a525ec0f84508c6097fdd9652fb6e153f3c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 5 17:37:46 2015 -0300
+
+    Corrigindo exibição de colunas
+
+[33mcommit 3ac67cd04c96b9aa03f3eec54414a39d976c0b89[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 5 16:56:58 2015 -0300
+
+    Adicionando Jquery
+
+[33mcommit dae6c88ce44b1bfcc5ab6fbd7383596f4ba33549[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 5 16:41:30 2015 -0300
+
+    Removendo Rodapé
+
+[33mcommit 15ffd60dd613dc847a9731c5f709586faf716539[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue May 5 16:35:00 2015 -0300
+
+    Adicionando Pagina teste e mostrando itens
+
+[33mcommit ee2717934e06ad74e70b1472ce78388b8ef6925c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 17:57:40 2015 -0300
+
+    Rodape sempre no fundo
+
+[33mcommit 700baef1a78f193c9eb2406bbfcbd224a29095ae[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 17:27:15 2015 -0300
+
+    Cores menu corrigido
+
+[33mcommit 1dc0a3c507c355bdd49ac60628905cfc35264661[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 17:17:23 2015 -0300
+
+    Links Funcionando
+
+[33mcommit b4575c76c288cedbd7bba73623832b995c5d4dfe[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 16:23:03 2015 -0300
+
+    routes ordem correta
+
+[33mcommit 0b3f2619e1a5302725e83d2844b3d6670e6ea6f5[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 16:03:50 2015 -0300
+
+    Menu com Links
+
+[33mcommit 11dbeeb6e840130ab2c26033bd4985ff13deff3b[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 15:58:57 2015 -0300
+
+    corrigido routes
+
+[33mcommit f7b89a66949fcd298217fe8b89db5cf9fc85445c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 15:38:43 2015 -0300
+
+    Criado todas as paginas
+
+[33mcommit bf3648496d749448b630ee349507c1003f0e40c6[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:45:36 2015 -0300
+
+    Salvando no Pendrive
+
+[33mcommit e83fe79bd37c98e28b66df16a9bbfa0c5480a7dc[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:41:07 2015 -0300
+
+    Teste do @message
+
+[33mcommit 03b597b09f5452f60a7555029b8a6a36de694b2c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:34:53 2015 -0300
+
+    Site Completo como aplicativo, pronto para divisão
+
+[33mcommit 412fe4633887f81ad495c368576c7e10959f670c[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:26:44 2015 -0300
+
+    Menu com CSS funcionando
+
+[33mcommit 5839bb8be0b5d34349d57dab9ae5932fe53a838f[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:17:29 2015 -0300
+
+    Organizando CSS na public (mesmo lugar da main)
+
+[33mcommit bcd2414a77477849446ca45b6d133933d7a2db99[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 12:04:04 2015 -0300
+
+    Teste de uso do HTML no views~
+
+[33mcommit 6826f7ab83eba9136858f9dc34867a2658214e29[m
+Author: Gabriel da Silva Alves <gabrielonze@hotmail.com>
+Date:   Tue Apr 28 11:43:59 2015 -0300
+
+    Teste Git transferencia de pasta
+
+[33mcommit aa19e914aaca625862823a7c0501f56877fcb376[m
+Author: Gabriel S. Alves <gabrielonze@hotmail.com>
+Date:   Mon Apr 27 21:45:37 2015 -0300
+
+    Teste colocar arquivo Public
+
+[33mcommit a1a5cb918fa50ec3b0c9ebec6db6c58b5ce2de59[m
+Author: Gabriel S. Alves <gabrielonze@hotmail.com>
+Date:   Mon Apr 27 21:27:36 2015 -0300
+
+    Site Base

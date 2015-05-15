@@ -6,12 +6,12 @@
 GET     /                           controllers.Application.index
 GET     /login                      controllers.Application.login
 GET     /catalogo                   controllers.Application.catalogo
-#GET     /meusjogos                  controllers.Application.meusjogos
+GET     /meusjogos                  controllers.Application.meusjogos
 GET     /adicionar                  controllers.Application.adicionar
 GET     /tes                        controllers.Application.tes
 
 GET     /gamelist                   controllers.Application.getGames
-POST    /games                       controllers.Application.addGame
+POST    /games                      controllers.Application.addGame
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
