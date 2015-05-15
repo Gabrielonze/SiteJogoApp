@@ -19,20 +19,25 @@ object Application extends Controller {
       "nome" -> text,
       "finalizado" -> text,
       "descricao" -> text,
-      "nota" -> number,
+      "nota" -> text,
       "genero" -> text
     )(Game.apply)(Game.unapply)
   )
 
-  def addBar() = Action { implicit request =>
-    gameForm.bindFromRequest.value map {nome;finalizado;descricao;nota;genero =>
-      Game.create(Game(0, nome,finalizado,descricao,nota,genero))
+  def addGame() = Action { implicit request =>
+    gameForm.bindFromRequest.fold(
+    formWithErrors => {
+      BadRequest(views.html.index("ERRO"))
+    },
+    contact => {
+      val gameId = Game.create(Game(0, "nome","finalizado","descricao","nota","genero"))
       Redirect(routes.Application.index())
-    } getOrElse BadRequest
+    }
+  )
   }
 
-  def getBars() = Action {
-    val bars = Game.findAll()
+  def getGames() = Action {
+    val games = Game.findAll()
     Ok(Json.toJson(games))
   }
 

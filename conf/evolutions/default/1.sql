@@ -1,18 +1,12 @@
 # --- First database schema
 
 # --- !Ups
-
-create table bar (
-  id                        SERIAL PRIMARY KEY,
-  name                      varchar(255) not null
-);
-
-create table jogos(
-	ID int identity primary key,
+create table game(
+	ID int primary key,
 	nome varchar(100),
 	finalizado varchar(20),
-	descricao varchar(MAX),
-	nota smallint,
+	descricao varchar(300),
+	nota varchar(10),
 	genero varchar(50)
 );
 
@@ -20,4 +14,4 @@ create table jogos(
 
 drop table if exists bar;
 
-drop table if exists jogos;
+drop table if exists game;

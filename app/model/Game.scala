@@ -6,7 +6,7 @@ import play.api.Play.current
 import anorm._
 import anorm.SqlParser._
 
-case class Game(id: Int, nome: String, finalizado: String, descricao: String, nota: Int, genero: String)
+case class Game(id: Int, nome: String, finalizado: String, descricao: String, nota: String, genero: String)
 
 object Game {
 
@@ -15,7 +15,7 @@ object Game {
     get[String]("nome") ~
     get[String]("finalizado") ~
     get[String]("descricao") ~
-    get[Float]("nota") ~
+    get[String]("nota") ~
     get[String]("genero") map {
       case id~nome~finalizado~descricao~nota~genero => Game(id,nome,finalizado,descricao,nota,genero)
     }
@@ -29,7 +29,7 @@ object Game {
 
   def create(game: Game): Unit = {
     DB.withConnection { implicit connection =>
-      SQL("insert into game(id,nome,finalizado,descricao,nota,genero) values ({nome}, {finalizado}, {descricao}, {nota}, {genero})").on(
+      SQL("insert into game(nome,finalizado,descricao,nota,genero) values ({nome}, {finalizado}, {descricao}, {nota}, {genero})").on(
         'nome -> game.nome,
         'finalizado -> game.finalizado,
         'descricao -> game.descricao,
