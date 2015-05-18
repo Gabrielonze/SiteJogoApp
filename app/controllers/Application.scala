@@ -15,7 +15,7 @@ object Application extends Controller {
 
   val gameForm = Form(
     mapping(
-      "0" -> number,
+      "num" -> number,
       "nome" -> text,
       "finalizado" -> text,
       "descricao" -> text,
@@ -27,7 +27,7 @@ object Application extends Controller {
   def addGame() = Action { implicit request =>
     gameForm.bindFromRequest.fold(
     formWithErrors => {
-      BadRequest(views.html.catalogo("ERRO"))
+      BadRequest(views.html.login("ERRO"))
     },
     contact => {
       val gameId = Game.create(Game(15, "nome","finalizado","descricao","nota","genero"))
@@ -50,11 +50,13 @@ object Application extends Controller {
   }
 
   def catalogo = Action {
-    Ok(views.html.catalogo("Your new application is ready."))
+    var gameBanco = Game.gameList
+    Ok(views.html.catalogo(gameBanco))
   }
 
   def meusjogos = Action {
-    Ok(views.html.meusjogos(gameForm))
+    var gameBanco = Game.gameList
+    Ok(views.html.meusjogos("Your new application is ready."))
   }
 
   def adicionar = Action {

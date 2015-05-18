@@ -27,6 +27,19 @@ object Game {
     }
   }
 
+  val getObjects = SQL("Select * from game")
+
+  val gameList = getObjects.map(row =>
+    List(
+      row[Int]("id"),
+      row[String]("nome"),
+      row[String]("finalizado"),
+      row[String]("descricao"),
+      row[String]("nota"),
+      row[String]("genero")
+    )
+  )
+
   def create(game: Game): Unit = {
     DB.withConnection { implicit connection =>
       SQL("insert into game(id, nome,finalizado,descricao,nota,genero) values (10, {nome}, {finalizado}, {descricao}, {nota}, {genero})").on(

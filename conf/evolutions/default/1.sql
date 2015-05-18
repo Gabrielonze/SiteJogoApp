@@ -11,7 +11,8 @@ create table game(
 );
 
 
-insert into game(id, nome, finalizado, descricao, nota, genero) values (10,'Pelo DB','DB','DB','DB','DB')
+insert into game(id, nome, finalizado, descricao, nota, genero) values (10,'Pelo DB','DB','DB','DB','DB');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (11,'Pelo DB2','DB2','DB2','DB2','DB2');
 
 # --- !Downs
 
