@@ -46,6 +46,11 @@ object Application extends Controller {
     Ok(views.html.login("Your new application is ready."))
   }
 
+  def modGame(id:Int) = Action{
+    val dGame = Game.modGame(id)
+    Ok(views.html.login("Your new application is ready."))
+  }
+
   def index = Action {
     Ok(views.html.index(gameForm))
   }

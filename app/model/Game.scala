@@ -27,18 +27,11 @@ object Game {
     }
   }
 
-  val getObjects = SQL("Select * from game")
-
-  val gameList = getObjects.map(row =>
-    List(
-      row[Int]("id"),
-      row[String]("nome"),
-      row[String]("finalizado"),
-      row[String]("descricao"),
-      row[String]("nota"),
-      row[String]("genero")
-    )
-  )
+  def gameList(): List[Game] = {
+    DB.withConnection { implicit connection =>
+    val listObjs = SQL("Select * from game").as(Game.simple *)
+    }
+  }
 
   def create(game: Game): Unit = {
     DB.withConnection { implicit connection =>
@@ -55,6 +48,24 @@ object Game {
   def delGame(id_pego:Int){
     DB.withConnection { implicit connection =>
     val delObjs = SQL("DELETE FROM game WHERE id = {id}; ").on('id -> id_pego).executeUpdate()
+    }
+  }
+
+  def modGame(id_pego:Int){
+    DB.withConnection { implicit connection =>
+    val modObj = SQL("SELECT * FROM game WHERE id = {id}; ").on('id -> id_pego).execute()
+    
+    /*val modList = modObj.map(row =>
+        List(
+          row[Int]("id"),
+          row[String]("nome"),
+          row[String]("finalizado"),
+          row[String]("descricao"),
+          row[String]("nota"),
+          row[String]("genero")
+        )
+      )
+*/
     }
   }
 
