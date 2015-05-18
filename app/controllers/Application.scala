@@ -41,6 +41,11 @@ object Application extends Controller {
     Ok(Json.toJson(games))
   }
 
+  def delGame(id:Int) = Action{
+    val dGame = Game.delGame(id)
+    Ok(views.html.login("Your new application is ready."))
+  }
+
   def index = Action {
     Ok(views.html.index(gameForm))
   }
