@@ -27,7 +27,7 @@ object Game {
     }
   }
 
-  def gameList(): List[Game] = {
+  def gameList() = {
     DB.withConnection { implicit connection =>
     val listObjs = SQL("Select * from game").as(Game.simple *)
     }
@@ -51,7 +51,7 @@ object Game {
     }
   }
 
-  def modGame(id_pego:Int){
+  def modGameGet(id_pego:Int){
     DB.withConnection { implicit connection =>
     val modObj = SQL("SELECT * FROM game WHERE id = {id}; ").on('id -> id_pego).execute()
     
@@ -69,4 +69,15 @@ object Game {
     }
   }
 
-}
+  def modGameUpdate(id_pego:Int){
+    DB.withConnection { implicit connection =>
+    val modObjUp = SQL("UPDATE game set nome = {nome}, finalizado = {finalizado}, descricao = {descricao}, nota ={nota}, genero = {genero} WHERE id = {id}").on(
+        'nome -> game.nome,
+        'finalizado -> game.finalizado,
+        'descricao -> game.descricao,
+        'nota -> game.nota,
+        'genero -> game.genero,
+        'id -> id_pego
+      ).executeUpdate()
+    }
+  }}
