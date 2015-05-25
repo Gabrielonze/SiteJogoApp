@@ -72,11 +72,11 @@ object Game {
   def modGameUpdate(id_pego:Int){
     DB.withConnection { implicit connection =>
     val modObjUp = SQL("UPDATE game set nome = {nome}, finalizado = {finalizado}, descricao = {descricao}, nota ={nota}, genero = {genero} WHERE id = {id}").on(
-        'nome -> game.nome,
-        'finalizado -> game.finalizado,
-        'descricao -> game.descricao,
-        'nota -> game.nota,
-        'genero -> game.genero,
+        'nome -> "nome_pego",
+        'finalizado -> "finalizado_pego",
+        'descricao -> "descricao_pego",
+        'nota -> "nota_pego",
+        'genero -> "genero_pego",
         'id -> id_pego
       ).executeUpdate()
     }

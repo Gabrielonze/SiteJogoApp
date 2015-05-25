@@ -53,7 +53,7 @@ object Application extends Controller {
 
   def modGameEdit(id:Int) = Action{
     val dGame = Game.modGameUpdate(id)
-    Ok(views.html.login("Your new application is ready."))
+    Ok(views.html.editor(dGame))
   }
 
   def index = Action {

@@ -9,37 +9,9 @@
 	<div class="row-fluid name_pg shb lebr"><h1> Catalogo </h1></div>
 	
 	<div class="row-fluid app_part shb">
-@listJogos.map{i =>
-		<div class="span3 pedidos_item shb">
-			<div class="row-fluid">
-				<div class="span12">
-					<div class="row-fluid">
-						<div class="span12 pedidos_item_things oran">@i.1</div>
-					</div>
-					<div class="row-fluid">
-						<textarea class="span12" name="resenha" readonly>@i.3</textarea>
-					</div>
-					<div class="row-fluid">
-						<div class="span6 pedidos_item_things oran oran">@i.4</div>
-						<div class="span6 pedidos_item_things oran">@i.5</div>
-					</div>
-					<div class="row-fluid">
-						<a href="/exl:@i.0"><input type="button" class="span6 pedidos_item_things oran oran" value="Excluir"/></a>
-						<a href="/exl:@i.0"><input type="button" class="span6 pedidos_item_things oran oran" value="Editar"/></a>
-					</div>
-				</div>
 
-		</div>
+<!-- AQUI -->
 
-
-	</div>
-	<script>
-		if(@i.0 % 4 === 0) {
-			window.document.write("</div> <div class='row-fluid'>")
-		}
-	</script>
-	
-}
 	</div>
 </div>
 
