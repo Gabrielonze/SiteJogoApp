@@ -4,11 +4,16 @@ import play.api.db._
 import play.api.Play.current
 
 import anorm._
+import anorm.SQL
 import anorm.SqlParser._
 
 case class Game(id: Int, nome: String, finalizado: String, descricao: String, nota: String, genero: String)
 
+
 object Game {
+
+  val sql: SqlQuery = SQL("select * from game")
+
 
   val simple = {
     get[Int]("id") ~
@@ -20,6 +25,41 @@ object Game {
     case id~nome~finalizado~descricao~nota~genero => Game(id,nome,finalizado,descricao,nota,genero)
     }
   }
+
+  def getAll: List[Game] = DB.withConnection {
+
+    implicit connection =>
+      sql().map(row =>
+        Game(row[Int]("id"), row[String]("nome"), row[String]("finalizado"), row[String]("descricao"), row[String]("nota"), row[String]("genero"))
+      ).toList
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   def findAll(): Seq[Game] = {
     DB.withConnection { implicit connection =>

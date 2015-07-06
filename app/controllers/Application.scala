@@ -15,7 +15,7 @@ object Application extends Controller {
 
   val gameForm = Form(
     mapping(
-      "num" -> number,
+      "id" -> number,
       "nome" -> text,
       "finalizado" -> text,
       "descricao" -> text,
@@ -30,14 +30,15 @@ object Application extends Controller {
       BadRequest(views.html.login("ERRO"))
     },
     contact => {
-      val gameId = Game.create(Game(15, "nome","finalizado","descricao","nota","genero"))
+      val gameId = gameForm.fill(Game(15,"nome","finalizado","descricao", "nota", "genero"))
+        //Game(15, "nome","finalizado","descricao","nota","genero"))
       Redirect(routes.Application.index())
     }
   )
   }
 
   def getGames() = Action {
-    val games = Game.findAll()
+    val games = Game.getAll
     Ok(Json.toJson(games))
   }
 
@@ -70,8 +71,8 @@ object Application extends Controller {
   }
 
   def meusjogos = Action {
-    var gameBanco = Game.gameList
-    Ok(views.html.meusjogos("Your new application is ready."))
+    var gameBanco = Game.getAll
+    Ok(views.html.meusjogos(gameBanco))
   }
 
   def adicionar = Action {

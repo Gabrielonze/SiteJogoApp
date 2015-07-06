@@ -11,8 +11,15 @@ create table game(
 );
 
 
-insert into game(id, nome, finalizado, descricao, nota, genero) values (10,'Pelo DB','DB','DB','DB','DB');
-insert into game(id, nome, finalizado, descricao, nota, genero) values (11,'Pelo DB2','DB2','DB2','DB2','DB2');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (1,'Pelo DB','DB','DB','DB','DB');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (2,'Pelo DB2','DB2','DB2','DB2','DB2');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (3,'Funcionou','DB3','DB3','DB3','DB3');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (4,'Funcionou','DB3','DB3','DB3','DB3');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (5,'Funcionou','DB3','DB3','DB3','DB3');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (6,'Funcionou','DB3','DB3','DB3','DB3');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (7,'Funcionou','DB3','DB3','DB3','DB3');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (8,'Funcionou','DB3','DB3','DB3','DB3');
+insert into game(id, nome, finalizado, descricao, nota, genero) values (9,'Funcionou','DB3','DB3','DB3','DB3');
 
 # --- !Downs
 
