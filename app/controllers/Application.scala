@@ -70,7 +70,7 @@ object Application extends Controller {
   }
 
   def adicionar = Action {
-    Ok(views.html.adicionar("Your new application is ready."))
+    Ok(views.html.adicionar(gameForm))
   }
 
 
