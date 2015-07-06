@@ -47,7 +47,11 @@ object Game {
     }
   }
 
-
+  def delGame(id_pego:Int){
+    DB.withConnection { implicit connection =>
+    val delObjs = SQL("DELETE FROM game WHERE id = {id}; ").on('id -> id_pego).executeUpdate()
+    }
+  }
 
 
 
@@ -81,11 +85,7 @@ object Game {
 
   
 
-  def delGame(id_pego:Int){
-    DB.withConnection { implicit connection =>
-    val delObjs = SQL("DELETE FROM game WHERE id = {id}; ").on('id -> id_pego).executeUpdate()
-    }
-  }
+  
 
   def modGameGet(id_pego:Int){
     DB.withConnection { implicit connection =>
