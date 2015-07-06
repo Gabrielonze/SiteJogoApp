@@ -28,32 +28,13 @@ object Application extends Controller {
     Redirect(routes.Application.meusjogos)
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//I) Aparece todo o DB
   implicit val gameWrites = Json.writes[GameDB]
-
-  
-
   def getGames() = Action {
     val games = Game.getAll
     Ok(Json.toJson(games))
   }
+//F) Aparece todo o DB
 
   def delGame(id:Int) = Action{
     val dGame = Game.delGame(id)
