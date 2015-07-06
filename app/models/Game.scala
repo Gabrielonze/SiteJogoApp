@@ -8,6 +8,7 @@ import anorm.SQL
 import anorm.SqlParser._
 
 case class Game(nome: String, finalizado: String, descricao: String, nota: String, genero: String)
+case class GameDB(id: Int, nome: String, finalizado: String, descricao: String, nota: String, genero: String)
 
 
 object Game {
@@ -16,20 +17,21 @@ object Game {
 
 
   val simple = {
+    get[Int]("id") ~
     get[String]("nome") ~
     get[String]("finalizado") ~
     get[String]("descricao") ~
     get[String]("nota") ~
     get[String]("genero") map {
-    case nome~finalizado~descricao~nota~genero => Game(nome,finalizado,descricao,nota,genero)
+    case id~nome~finalizado~descricao~nota~genero => GameDB(id,nome,finalizado,descricao,nota,genero)
     }
   }
 
-  def getAll: List[Game] = DB.withConnection {
+  def getAll: List[GameDB] = DB.withConnection {
 
     implicit connection =>
       sql().map(row =>
-        Game(row[String]("nome"), row[String]("finalizado"), row[String]("descricao"), row[String]("nota"), row[String]("genero"))
+        GameDB(row[Int]("id"), row[String]("nome"), row[String]("finalizado"), row[String]("descricao"), row[String]("nota"), row[String]("genero"))
       ).toList
   }
 
@@ -65,7 +67,7 @@ object Game {
 
 
 
-  def findAll(): Seq[Game] = {
+  def findAll(): Seq[GameDB] = {
     DB.withConnection { implicit connection =>
       SQL("select * from game").as(Game.simple *)
     }

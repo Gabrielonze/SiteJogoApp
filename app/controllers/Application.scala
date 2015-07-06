@@ -6,6 +6,7 @@ import play.api.data.Forms.{single, nonEmptyText}
 import play.api.mvc.{Action, Controller}
 
 import models.Game
+import models.GameDB
 import play.api.libs.json.Json
 
 
@@ -45,20 +46,9 @@ object Application extends Controller {
 
 
 
-  implicit val gameWrites = Json.writes[Game]
+  implicit val gameWrites = Json.writes[GameDB]
 
-  def addGame() = Action { implicit request =>
-    gameForm.bindFromRequest.fold(
-    formWithErrors => {
-      BadRequest(views.html.login("ERRO"))
-    },
-    contact => {
-      val gameId = gameForm.fill(Game("nome","finalizado","descricao", "nota", "genero"))
-        //Game(15, "nome","finalizado","descricao","nota","genero"))
-      Redirect(routes.Application.index())
-    }
-  )
-  }
+  
 
   def getGames() = Action {
     val games = Game.getAll
