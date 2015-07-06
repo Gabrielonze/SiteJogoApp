@@ -11,18 +11,41 @@ import play.api.libs.json.Json
 
 object Application extends Controller {
 
-  implicit val gameWrites = Json.writes[Game]
 
-  val gameForm = Form(
-    mapping(
-      "id" -> number,
-      "nome" -> text,
-      "finalizado" -> text,
-      "descricao" -> text,
-      "nota" -> text,
-      "genero" -> text
-    )(Game.apply)(Game.unapply)
-  )
+  val gameForm = Form(mapping(
+    "nome" -> nonEmptyText,
+    "descricao" -> text,
+    "finalizado" -> text,
+    "nota" -> text,
+    "genero" -> text)(Game.apply)(Game.unapply))
+
+  def create() = Action { implicit request =>
+    gameForm.bindFromRequest.fold(
+      formWithErrors => Ok("Não OK"),
+      value => Game.create(value)
+    )
+    Redirect(routes.Application.meusjogos)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  implicit val gameWrites = Json.writes[Game]
 
   def addGame() = Action { implicit request =>
     gameForm.bindFromRequest.fold(
@@ -30,7 +53,7 @@ object Application extends Controller {
       BadRequest(views.html.login("ERRO"))
     },
     contact => {
-      val gameId = gameForm.fill(Game(15,"nome","finalizado","descricao", "nota", "genero"))
+      val gameId = gameForm.fill(Game("nome","finalizado","descricao", "nota", "genero"))
         //Game(15, "nome","finalizado","descricao","nota","genero"))
       Redirect(routes.Application.index())
     }

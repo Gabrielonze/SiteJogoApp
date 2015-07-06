@@ -1,19 +1,25 @@
-@(form: play.api.data.Form[models.Game])
+@(gameForm: Form[models.Game])
 
 @main("Welcome to Play 2.0") {
 
     <script src='@routes.Assets.at("javascripts/index.min.js")' type='text/javascript'></script>
 
-    <ul id="bars"></ul>
+    
 
-    <form method="POST" action="/games">
-        <input type="text" placeholder="Nome:" name="nome">
-        <input type="text" placeholder="Finalizado em:" name="finalizado">
-		<input type="text" placeholder="Nota:" name="nota">
-		<input type="text" placeholder="Genero" name="genero">
-		<textarea name="comentario"></textarea>
 
-        <input type="submit"/>
-    </form>
+    @helper.form(action = routes.Application.create) {
+
+        @gameForm.globalError.map { error =>
+            <span class="error">@error.message</span>
+        }
+          
+          @helper.inputText(gameForm("nome"))
+          @helper.textarea(gameForm("descricao"))
+          @helper.inputText(gameForm("finalizado"))
+          @helper.inputText(gameForm("nota"))
+          @helper.inputText(gameForm("genero"))
+          
+            <button type="submit" >Create Product</button>
+      }
 
 }
