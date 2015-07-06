@@ -20,6 +20,14 @@ object Application extends Controller {
     "nota" -> text,
     "genero" -> text)(Game.apply)(Game.unapply))
 
+  val gameDBForm = Form(mapping(
+    "id" -> number,
+    "nome" -> nonEmptyText,
+    "descricao" -> text,
+    "finalizado" -> text,
+    "nota" -> text,
+    "genero" -> text)(GameDB.apply)(GameDB.unapply))
+
   def create() = Action { implicit request =>
     gameForm.bindFromRequest.fold(
       formWithErrors => Ok("Não OK"),
@@ -38,18 +46,34 @@ object Application extends Controller {
 
   def delGame(id:Int) = Action{
     val dGame = Game.delGame(id)
-    Ok(views.html.login("Your new application is ready."))
-  }
-
-  def modGame(id:Int) = Action{
-    val dGame = Game.modGameGet(id)
-    Ok(views.html.login("Your new application is ready."))
+    Redirect(routes.Application.meusjogos)
   }
 
   def modGameEdit(id:Int) = Action{
-    val dGame = Game.modGameUpdate(id)
-    Ok(views.html.editor(dGame))
+    val dGame = Game.modGameGet(id)
+    Ok(views.html.editar(dGame))
   }
+
+  def modGameUp = Action{ implicit request =>
+    gameDBForm.bindFromRequest.fold(
+      formWithErrors => Ok("Não OK"),
+      value => Game.modGameUpdate(value)
+    )
+    Redirect(routes.Application.meusjogos)
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
   def index = Action {
     Ok(views.html.index(gameForm))

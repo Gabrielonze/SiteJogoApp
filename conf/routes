@@ -13,8 +13,9 @@ GET     /tes                        controllers.Application.tes
 GET     /gamelist                   controllers.Application.getGames
 POST    /games                      controllers.Application.create
 GET 	/exl:id 					controllers.Application.delGame(id: Int)
-GET 	/mod:id 					controllers.Application.modGame(id: Int)
 GET 	/mod/edit:id 				controllers.Application.modGameEdit(id: Int)
+POST 	/mod 					    controllers.Application.modGameUp
+
 
 
 # Map static resources from the /public folder to the /assets URL path

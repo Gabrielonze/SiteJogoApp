@@ -17,6 +17,16 @@ object Game {
 
 
   val simple = {
+    get[String]("nome") ~
+    get[String]("finalizado") ~
+    get[String]("descricao") ~
+    get[String]("nota") ~
+    get[String]("genero") map {
+    case nome~finalizado~descricao~nota~genero => Game(nome,finalizado,descricao,nota,genero)
+    }
+  }
+
+  val simpleDB = {
     get[Int]("id") ~
     get[String]("nome") ~
     get[String]("finalizado") ~
@@ -53,15 +63,25 @@ object Game {
     }
   }
 
+  def modGameGet(id_pego:Int): Option[GameDB] = {
+    DB.withConnection { implicit connection =>
+    val modObj = SQL("SELECT * FROM game WHERE id = {id};")
+    modObj.on('id -> id_pego).as(simpleDB.singleOpt)
+    }
+  }
 
-
-
-
-
-
-
-
-
+  def modGameUpdate(game: GameDB): Unit = {
+    DB.withConnection { implicit connection =>
+    val modObjUp = SQL("UPDATE game set nome = {nome}, finalizado = {finalizado}, descricao = {descricao}, nota ={nota}, genero = {genero} WHERE id = {id}").on(
+        'nome -> game.nome,
+        'finalizado -> game.finalizado,
+        'descricao -> game.descricao,
+        'nota -> game.nota,
+        'genero -> game.genero,
+        'id -> game.id
+      ).executeUpdate()
+    }
+  }
 
 
 
@@ -73,7 +93,7 @@ object Game {
 
   def findAll(): Seq[GameDB] = {
     DB.withConnection { implicit connection =>
-      SQL("select * from game").as(Game.simple *)
+      SQL("select * from game").as(Game.simpleDB *)
     }
   }
 
@@ -84,36 +104,8 @@ object Game {
   }
 
   
-
   
 
-  def modGameGet(id_pego:Int){
-    DB.withConnection { implicit connection =>
-    val modObj = SQL("SELECT * FROM game WHERE id = {id}; ").on('id -> id_pego).execute()
-    
-    /*val modList = modObj.map(row =>
-        List(
-          row[Int]("id"),
-          row[String]("nome"),
-          row[String]("finalizado"),
-          row[String]("descricao"),
-          row[String]("nota"),
-          row[String]("genero")
-        )
-      )
-*/
-    }
-  }
 
-  def modGameUpdate(id_pego:Int){
-    DB.withConnection { implicit connection =>
-    val modObjUp = SQL("UPDATE game set nome = {nome}, finalizado = {finalizado}, descricao = {descricao}, nota ={nota}, genero = {genero} WHERE id = {id}").on(
-        'nome -> "nome_pego",
-        'finalizado -> "finalizado_pego",
-        'descricao -> "descricao_pego",
-        'nota -> "nota_pego",
-        'genero -> "genero_pego",
-        'id -> id_pego
-      ).executeUpdate()
-    }
-  }}
+
+}

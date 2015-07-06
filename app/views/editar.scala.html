@@ -1,42 +1,46 @@
-@(listJogos: Unit)
+@(gameForm: Option[models.GameDB])
 
 @main("Adicione seus Jogos") {
+
 
 <div class="cont row-fluid">
 	
 	<div class="row-fluid name_pg shb lebr"><h1> Cadastro Jogos </h1></div>
 	
 	<div class="row-fluid app_part shb">
-		<form method="POST" action="/mod/edit">
+		@gameForm.map{i =>
+		<form method="POST" action="@routes.Application.modGameUp">
 			<div class="row-fluid">
 				<label class="span3">
 					Jogo:<br/>
-					<input type="text" name="nome" required>
+					<input type="text" value="@i.nome" name="nome" required>
+					<input type="hidden" value="@i.id" name="id">
 				</label>
 				<label class="span3">
 					Finalizado em:<br/>
-					<input type="text" name="finalizado" required>
+					<input type="text" value="@i.finalizado" name="finalizado" required>
 				</label>
 				<label class="span3">
 					Nota de 0 a 10:<br/>
-					<input type="text" name="nota" required>
+					<input type="text" value="@i.nota" name="nota" required>
 				</label>
 				<label class="span3">
 					Genero:<br/>
-					<input type="text" name="genero" required>
+					<input type="text" value="@i.genero" name="genero" required>
 				</label>
 			</div>
 	
 			<div class="row-fluid">
 				<label class="span9">
 					Escreva o que achou do Jogo:<br/>
-					<textarea name="comentario"></textarea>
+					<textarea name="descricao">@i.descricao</textarea>
 				</label>
 				<label class="span3">
 					<input type="submit" class="envJo" value="Cadastrar">
 				</label>
-			</div>
+			</div>	
 		</form>
+		}
 	</div>
 </div> 
 
